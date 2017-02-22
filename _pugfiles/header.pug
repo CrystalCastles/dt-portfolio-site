@@ -1,13 +1,20 @@
+mixin nav-content()
+  ul
+    li: a(href="#about") About
+    li: a(href="#projects") Projects
+    li: a(href="#experience") Experience
+    li: a(href="#contact") Contact
+
+.mobile-nav
+  +nav-content()
+
 header
   .header-position
     h1.logo Portfolio Site
   
     nav.site-nav
-      ul
-        li: a(href="#about") About
-        li: a(href="#projects") Projects
-        li: a(href="#experience") Experience
-        li: a(href="#contact") Contact
+      +nav-content() 
     
     a(href="mailto:test@example.com").email-link +email me
-  
+    
+    .mobile-nav-toggle: span
