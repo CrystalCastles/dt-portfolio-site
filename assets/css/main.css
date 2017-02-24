@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,400italic);
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -637,6 +638,26 @@ body {
         -ms-transform: translateY(0%);
             transform: translateY(0%); } }
 
+section.about {
+  background-image: url(../img/about-bg.jpg);
+  background-position: center bottom;
+  background-size: cover; }
+  section.about h2 {
+    color: #3f3f42;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: -108px;
+    margin-top: 0; }
+  section.about .home-lead {
+    padding-bottom: 50px; }
+
+@media (max-width: 640px) {
+  section.about h2, section.about .home-lead {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px; } }
+
 .home-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -679,19 +700,23 @@ body {
               order: -1; }
   .home-wrap .col-1 {
     max-width: 300px;
-    margin: 0 10px;
-    background: pink; }
+    margin: 0 10px; }
   .home-wrap .col-2 {
     max-width: 620px;
-    margin: 0 10px;
-    background: honeydew; }
+    margin: 0 10px; }
   .home-wrap .col-50 {
-    width: 50%;
-    background: yellow; }
+    width: 50%; }
+  .home-wrap .push-right {
+    margin-left: 330px; }
   @media (max-width: 640px) {
     .home-wrap .home-sections .flex {
       display: block; }
     .home-wrap .col-1 {
       max-width: 100%; }
     .home-wrap .col-50 {
-      width: auto; } }
+      width: auto; }
+    .home-wrap .push-right {
+      margin-left: 10px; } }
+  .home-wrap .home-lead {
+    font-size: 36px;
+    line-height: 1.1; }
