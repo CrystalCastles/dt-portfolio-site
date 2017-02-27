@@ -495,6 +495,43 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+.home-cta {
+  font-size: 28px;
+  display: block;
+  background: white;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 0.4em 0;
+  line-height: 1.25;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out; }
+  .home-cta:hover {
+    -webkit-box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4); }
+
+.flex-thumb {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  padding-bottom: 56%;
+  padding-right: 100%;
+  position: absolute; }
+  @media (max-width: 640px) {
+    .flex-thumb {
+      position: relative;
+      display: none; } }
+
+.flex-thumb iframe,
+.flex-thumb object,
+.flex-thumb embed,
+.flex-thumb video {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0; }
+
 .home-wrap header {
   width: 135px;
   background: white;
@@ -658,6 +695,60 @@ section.about {
     margin-right: auto;
     max-width: 300px; } }
 
+section.projects {
+  background-image: url(../img/projects-bg.jpg);
+  background-color: #6a25c4;
+  background-position: center;
+  background-size: cover;
+  color: white; }
+  section.projects .home-cta {
+    color: #6a25c4; }
+  section.projects .flex-thumb {
+    -webkit-box-shadow: 0px 4px 40px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 4px 40px 3px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3); }
+    @media (max-width: 985px) {
+      section.projects .flex-thumb {
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1); } }
+  section.projects .project-strip {
+    position: absolute;
+    top: 0;
+    margin: -50px 0;
+    width: 100%;
+    height: -webkit-calc(100% + 100px);
+    height: calc(100% + 100px);
+    background-image: url(../img/project-strip.png);
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-size: 70%; }
+  section.projects .col-1 {
+    position: relative;
+    height: 400px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 640px) {
+      section.projects .col-1 {
+        height: auto;
+        display: block;
+        padding: 300px 20px; }
+        section.projects .col-1:last-child {
+          padding: 0px 20px 50px; } }
+
 .home-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -667,56 +758,71 @@ section.about {
   @media (max-width: 775px) {
     .home-wrap {
       display: block; } }
-  .home-wrap .home-sections {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
-    .home-wrap .home-sections section {
-      padding: 50px 0; }
-    .home-wrap .home-sections .flex {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: rows;
-          -ms-flex-direction: rows;
-              flex-direction: rows; }
-    .home-wrap .home-sections .flex--center {
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-    .home-wrap .home-sections .flex--space-around {
-      -webkit-justify-content: space-around;
-          -ms-flex-pack: distribute;
-              justify-content: space-around; }
-    .home-wrap .home-sections .order-first {
-      -webkit-box-ordinal-group: 0;
-      -webkit-order: -1;
-          -ms-flex-order: -1;
-              order: -1; }
-  .home-wrap .col-1 {
-    max-width: 300px;
-    margin: 0 10px; }
-  .home-wrap .col-2 {
-    max-width: 620px;
-    margin: 0 10px; }
-  .home-wrap .col-50 {
-    width: 50%; }
-  .home-wrap .push-right {
-    margin-left: 330px; }
-  @media (max-width: 640px) {
-    .home-wrap .home-sections .flex {
-      display: block; }
-    .home-wrap .col-1 {
-      max-width: 100%; }
-    .home-wrap .col-50 {
-      width: auto; }
-    .home-wrap .push-right {
-      margin-left: 10px; } }
-  .home-wrap .home-lead {
-    font-size: 36px;
-    line-height: 1.1; }
+
+.home-sections {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+  .home-sections section {
+    padding: 50px 0; }
+  .home-sections .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .home-sections .flex--center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .home-sections .flex--space-around {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .home-sections .order-first {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1; }
+
+.col-1 {
+  width: 320px;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.push-right {
+  margin-left: 330px; }
+
+.col-2 {
+  max-width: 640px;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%; }
+
+.col-50 {
+  width: 50%; }
+
+@media (max-width: 640px) {
+  .home-sections .flex {
+    display: block; }
+  .col-1 {
+    width: 100%; }
+  .col-50 {
+    width: auto; }
+  .push-right {
+    margin-left: 0; } }
+
+.home-lead {
+  line-height: 1.1;
+  font-size: 36px; }
+  .home-lead.outdented {
+    text-indent: -0.8em; }
+
+@media (max-width: 640px) {
+  .home-lead {
+    text-align: center; }
+    .home-lead.outdented {
+      text-indent: 0; } }

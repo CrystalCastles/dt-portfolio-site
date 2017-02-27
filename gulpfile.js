@@ -35,7 +35,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
         server: {
             baseDir: '_site',
         },
-        port: 8082
+        port: 8080
     });
 });
 
