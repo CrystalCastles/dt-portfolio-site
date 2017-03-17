@@ -705,7 +705,7 @@ section.about {
   section.about h2, section.about .home-lead {
     margin-left: auto;
     margin-right: auto;
-    max-width: 300px; } }
+    max-width: 260px; } }
 
 section.projects {
   background-image: url(../img/projects-bg.jpg);
@@ -895,6 +895,20 @@ section.notes {
     font-size: 18px;
     font-style: italic;
     line-height: 1.8; }
+    @media (max-width: 640px) {
+      section.notes .col-1 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
     section.notes .col-1:first-child {
       padding-left: 0;
       padding-right: 30px;
