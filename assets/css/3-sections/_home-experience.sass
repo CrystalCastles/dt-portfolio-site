@@ -7,6 +7,14 @@ section.experience
     display: flex
     align-items: center
     
+    @media(max-width: 640px)
+      height: auto
+      display: block
+      padding: 300px 20px
+      
+      &:last-child
+        padding: 0px 20px 50px
+    
   .home-cta
     color: white
     background: #78e8c8

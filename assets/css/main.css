@@ -776,6 +776,13 @@ section.experience {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media (max-width: 640px) {
+      section.experience .col-1 {
+        height: auto;
+        display: block;
+        padding: 300px 20px; }
+        section.experience .col-1:last-child {
+          padding: 0px 20px 50px; } }
   section.experience .home-cta {
     color: white;
     background: #78e8c8; }
