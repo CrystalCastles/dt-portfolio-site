@@ -1,5 +1,3 @@
 name: dt Portfolio
 markdown: kramdown
 exclude: ["node_modules", "gulpfile.js", "package.json"]
-baseurl: /dt-portfolio-site
-url: http://crystalcastles.github.io
