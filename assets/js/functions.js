@@ -3,7 +3,7 @@
 $(function(){
   setInterval(function(){articleTada()}, 4000);
   mobileNav();
-  smoothScroll();
+  smoothScroll(300);
 });
 
 
